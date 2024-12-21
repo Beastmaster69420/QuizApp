@@ -82,7 +82,7 @@ const Quiz = () => {
         setIncorrectCount(prev => prev + 1);
       }
 
-      setAnswer(null); // Clear the selected answer
+      setAnswer(null);
 
       if (round >= MAX_ROUND) {
         setIsGameOver(true);
@@ -109,7 +109,7 @@ const Quiz = () => {
               answer === index && styles.selectedButton,
             ]}
             onPress={() => setAnswer(index)}
-            disabled={answer !== null} // Disable button after answering
+            disabled={answer !== null} 
           >
             <Text style={styles.optionText}>{item}</Text>
           </TouchableOpacity>
